@@ -1,0 +1,39 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "es2015",
+    "moduleResolution": "node",
+    "experimentalDecorators": true,
+    "declaration": true,
+    "stripInternal": true,
+    "skipLibCheck": true,
+    "lib": [
+      "es2015",
+      "es5",
+      "dom"
+    ]
+  },
+  "files": [
+    "index.ts",
+    "./src/decorators/index.decorators.ts",
+    "./src/decorators/flext-handler.decorator.ts",
+    "./src/decorators/flext-stages.decorator.ts",
+    "./src/decorators/flext-component.decorator.ts",
+    "./src/decorators/flext-promise.decorator.ts",
+    "./src/model/flext-stage-manager.model.ts",
+    "./src/model/flext-stage.enum.ts",
+    "./src/typing/flext-default.types.ts",
+    "./src/typing/flext.types.ts",
+    "./src/typing/flext-stage.types.ts",
+    "./src/util/flext.util.ts",
+    "./src/flext.module.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist/"
+  ],
+  "angularCompilerOptions": {
+    "strictMetadataEmit": true,
+    "skipTemplateCodegen": true
+  }
+}

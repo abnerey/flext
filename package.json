@@ -1,0 +1,68 @@
+{
+  "name": "flext",
+  "version": "0.1.0",
+  "description": "Flow Extension",
+  "private": false,
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "publishConfig": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "tsc",
+    "build": "ng-packagr -p ng-package.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abnerey/flext.git"
+  },
+  "keywords": [
+    "angular",
+    "angular 2",
+    "angular 4",
+    "angular 5",
+    "flow",
+    "error",
+    "handle",
+    "async",
+    "frontend",
+    "front",
+    "end",
+    "control",
+    "functions",
+    "await",
+    "es6",
+    "flew",
+    "flew-handler",
+    "handler",
+    "typescript",
+    "decorators",
+    "exceptions",
+    "promises",
+    "aspect",
+    "AOP",
+    "oriented",
+    "middleware"
+  ],
+  "author": "Abner Juarez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/abnerey/flext/issues"
+  },
+  "homepage": "https://github.com/abnerey/flext#readme",
+  "peerDependencies": {
+    "@angular/core": "~4.0.0"
+  },
+  "devDependencies": {
+    "@angular/cli": "^1.6.5",
+    "@angular/common": "~4.0.0",
+    "@angular/compiler": "~4.0.0",
+    "@angular/compiler-cli": "^4.0.0",
+    "@angular/core": "~4.0.0",
+    "codelyzer": "^4.1.0",
+    "ng-packagr": "^1.6.0",
+    "reflect-metadata": "^0.1.10",
+    "rxjs": "5.4.2",
+    "tslint": "^5.9.1",
+    "typescript": "~2.2.0"
+  }
+}
