@@ -15,14 +15,6 @@ export type HandlerDefinition = {
 };
 
 /*
-* Definition for FlextComponent decorator
-* */
-export type ComponentDefinition = {
-    /*Array mixin to apply in the decorated component*/
-    mixin: FlextMixin[]
-};
-
-/*
 * Interface to implement for valid Mixin to use en FlextComponent
 * */
 export interface FlextMixin {

@@ -1,13 +1,14 @@
 import {HandlerDefinition} from '../typing/flext.types';
 import {FlextStageManager} from '../model/flext-stage-manager.model';
 import {StageDecoratorParams} from '../typing/flext-stage.types';
+import {FlextModule} from '../flext.module';
 
 /*
 * Decorator factory for normal functions
 * @param definition HandlerDefinition with values for describe behavior in stages and get a payload for invoke stage functions
 * @return Function valid for decorate use
 * */
-export function FlextException(definition: HandlerDefinition): Function {
+export function FlextException(definition: HandlerDefinition = {}): Function {
     const {preStage, postStage, successStage, errorStage, payload} = definition;
     return function (target, key, descriptor) {
         descriptor = descriptor || Object.getOwnPropertyDescriptor(target, key);
@@ -66,18 +67,20 @@ export function FlextHandler(definition: HandlerDefinition = {}): Function {
 * @param stageEntries IterableIterator<[string, Function]> with the whole functions decorated with certain stage decorator
 * @param extraEntries Function[] with the functions provided in FlextHandler | FlexException for certain stage
 * */
-function applyStage(params: StageDecoratorParams, stageEntries: IterableIterator<[string, Function]>, extraEntries: Function[]) {
+function applyStage(params: StageDecoratorParams, stageEntries: IterableIterator<[string, Function]>, extraEntries: Function[] = []) {
     params = Object.assign({}, params) as StageDecoratorParams;
-    const entries = extraEntries && extraEntries.length ?
-        getValues(stageEntries).concat(extraEntries) :
-        getValues(stageEntries);
-    for (const stageFunction of entries) {
+    const stageValues = getValues(stageEntries);
+    for (const stageFunction of stageValues) {
         try {
-            stageFunction(params);
+            const provider = FlextModule.getProviderByFunction(stageFunction);
+            if (provider) {
+                stageFunction.apply(FlextModule.getDependency(provider), [params]);
+            }
         } catch (err) {
             console.log(err);
         }
     }
+    extraEntries.forEach(entry => entry(params));
 }
 
 /*

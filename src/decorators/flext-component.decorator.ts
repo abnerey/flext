@@ -1,8 +1,7 @@
-import {ComponentDefinition, FlextMixin} from '../typing/flext.types';
+import {FlextMixin} from '../typing/flext.types';
 
-export function FlextComponent(definition: ComponentDefinition) {
-    const {mixin} = definition;
-    return Mixes(mixin);
+export function FlextComponent(mixins: FlextMixin[] = []) {
+    return Mixes(mixins);
 }
 
 export function Mixes(mixins: FlextMixin[]) {
