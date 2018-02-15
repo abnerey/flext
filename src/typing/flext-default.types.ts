@@ -1,3 +1,6 @@
+/*
+* Enum with the default values
+* */
 export enum FlextType {
     STRING = <any>'',
     NUMBER = <any>0,
