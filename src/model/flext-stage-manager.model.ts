@@ -1,3 +1,6 @@
+/*
+* Class for manage the stage functions
+* */
 export class FlextStageManager {
     private static _preStages = new Map<string, Function>();
     private static _postStages = new Map<string, Function>();

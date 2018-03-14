@@ -7,16 +7,28 @@ export class FlextModule {
     private static flextProvider: FlextProviderService;
     private static providersDescriptors = new Map<Function, Function>();
 
+    /*
+    * Static function to get dependencies from the Angular's DI
+    * @param dependency any token to get it's value from the DI
+    * */
     public static getDependency(dependency: any) {
         if (FlextModule.injector) {
             return FlextModule.injector.get(dependency);
         }
     }
 
+    /*
+    * Function to get a provider using a stageFunction as token
+    * @param stageFunction Function used as token
+    * @return Return the value from the DI
+    * */
     public static getProviderByFunction(stageFunction: Function) {
         return FlextModule.providersDescriptors.get(stageFunction);
     }
 
+    /*
+    * This function maps the provider's stage descriptors with to the provider class
+    * */
     private static fillDescriptors() {
         for (const provider of FlextModule.flextProvider.providers) {
             const descriptors = (<any>Object).getOwnPropertyDescriptors(provider.prototype);
@@ -29,6 +41,11 @@ export class FlextModule {
         }
     }
 
+    /*
+    * Function to initialize this module
+    * @param providers Array with the providers to use in stage behavior
+    * @return ModuleWithProviders
+    * */
     static forRoot(providers): ModuleWithProviders {
         return {
             ngModule: FlextModule,
