@@ -1,4 +1,4 @@
-export * from './flext-component.decorator';
-export * from './flext-handler.decorator';
-export * from './flext-promise.decorator';
-export * from './flext-stages.decorator';
+export {FlextComponent, Mixes} from './flext-component.decorator';
+export {FlextException, FlextHandler} from './flext-handler.decorator';
+export {FlextPromise} from './flext-promise.decorator';
+export {FlextSuccessStage, FlextErrorStage, FlextPostStage, FlextPreStage} from './flext-stages.decorator';
