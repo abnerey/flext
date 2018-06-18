@@ -12,7 +12,7 @@ export class FlextStageManager {
     * return IterableIterator with a array of entry
     * */
     public static getPreStages(): IterableIterator<[string, Function]> {
-        return this._preStages.entries();
+        return FlextStageManager._preStages.entries();
     }
     /*
     * Method to add an entry to preStage map
@@ -21,7 +21,7 @@ export class FlextStageManager {
     * */
     public static setPreStage(key: string, value: Function) {
         if (key && key.trim() && value) {
-            this._preStages.set(key, value);
+            FlextStageManager._preStages.set(key, value);
         }
     }
     /*
@@ -30,7 +30,7 @@ export class FlextStageManager {
     * return Function got with key
     * */
     public static getPreStage(key: string): Function {
-        return this._preStages.get(key);
+        return FlextStageManager._preStages.get(key);
     }
 
     /*
@@ -38,7 +38,7 @@ export class FlextStageManager {
     * return IterableIterator with a array of entry
     * */
     public static getPostStages(): IterableIterator<[string, Function]> {
-        return this._postStages.entries();
+        return FlextStageManager._postStages.entries();
     }
     /*
     * Method to add an entry to postStage map
@@ -47,7 +47,7 @@ export class FlextStageManager {
     * */
     public static setPostStage(key: string, value: Function) {
         if (key && key.trim() && value) {
-            this._postStages.set(key, value);
+            FlextStageManager._postStages.set(key, value);
         }
     }
     /*
@@ -56,7 +56,7 @@ export class FlextStageManager {
     * return Function got with key
     * */
     public static getPostStage(key: string): Function {
-        return this._postStages.get(key);
+        return FlextStageManager._postStages.get(key);
     }
 
     /*
@@ -64,7 +64,7 @@ export class FlextStageManager {
     * return IterableIterator with a array of entry
     * */
     public static getErrorStages(): IterableIterator<[string, Function]> {
-        return this._errorStages.entries();
+        return FlextStageManager._errorStages.entries();
     }
     /*
     * Method to add an entry to errorStage map
@@ -73,7 +73,7 @@ export class FlextStageManager {
     * */
     public static setErrorStage(key: string, value: Function) {
         if (key && key.trim() && value) {
-            this._errorStages.set(key, value);
+            FlextStageManager._errorStages.set(key, value);
         }
     }
     /*
@@ -82,7 +82,7 @@ export class FlextStageManager {
     * return Function got with key
     * */
     public static getErrorStage(key: string): Function {
-        return this._errorStages.get(key);
+        return FlextStageManager._errorStages.get(key);
     }
 
     /*
@@ -90,7 +90,7 @@ export class FlextStageManager {
     * return IterableIterator with a array of entry
     * */
     public static getSuccessStages(): IterableIterator<[string, Function]> {
-        return this._successStages.entries();
+        return FlextStageManager._successStages.entries();
     }
     /*
     * Method to add an entry to successStage map
@@ -99,7 +99,7 @@ export class FlextStageManager {
     * */
     public static setSuccessStage(key: string, value: Function) {
         if (key && key.trim() && value) {
-            this._successStages.set(key, value);
+            FlextStageManager._successStages.set(key, value);
         }
     }
     /*
@@ -108,6 +108,6 @@ export class FlextStageManager {
     * return Function got with key
     * */
     public static getSuccessStage(key: string): Function {
-        return this._successStages.get(key);
+        return FlextStageManager._successStages.get(key);
     }
 }
