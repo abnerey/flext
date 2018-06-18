@@ -1,6 +1,6 @@
 {
   "name": "flext",
-  "version": "1.0.0-beta.1",
+  "version": "1.0.0-beta.2",
   "description": "Flow Extension",
   "private": false,
   "main": "./dist/index.js",
@@ -54,12 +54,12 @@
   },
   "devDependencies": {
     "@angular/cli": "^1.7.4",
-    "@angular/common": "~5.2.1",
+    "@angular/common": "~5.2.11",
     "@angular/compiler": "~5.2.11",
     "@angular/compiler-cli": "~5.2.11",
     "@angular/core": "~5.2.11",
     "codelyzer": "^4.2.1",
-    "ng-packagr": "^1.6.0",
+    "ng-packagr": "~3.0.1",
     "reflect-metadata": "^0.1.10",
     "rxjs": "~5.5.5",
     "tslint": "^5.9.1",

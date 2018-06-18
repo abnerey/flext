@@ -3,8 +3,8 @@ import {FlextProviderService} from './service/flext-provider.service';
 
 @NgModule({})
 export class FlextModule {
-    private static injector: Injector;
-    private static flextProvider: FlextProviderService;
+    private static injector: Injector = null;
+    private static flextProvider: FlextProviderService = null;
     private static providersDescriptors = new Map<Function, Function>();
 
     /*
