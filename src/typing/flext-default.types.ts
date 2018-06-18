@@ -1,12 +1,12 @@
 /*
 * Enum with the default values
 * */
-export enum FlextType {
-    STRING = <any>'',
-    NUMBER = <any>0,
-    BOOLEAN = <any>false,
-    NULL = <any>null,
-    ARRAY = <any>[],
-    CLASS = <any>true,
-    CUSTOM = <any>1
+export class FlextType {
+    static STRING = '';
+    static NUMBER = 0;
+    static BOOLEAN = <any>false;
+    static NULL = <any>null;
+    static ARRAY = <any>[];
+    static CLASS = <any>true;
+    static CUSTOM = <any>1;
 }
