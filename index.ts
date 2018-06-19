@@ -14,6 +14,5 @@ export {
     FlextPromise,
     FlextHandler,
     FlextException,
-    FlextComponent,
-    Mixes
+    FlextComponent
 } from './src/decorators/index.decorators';
