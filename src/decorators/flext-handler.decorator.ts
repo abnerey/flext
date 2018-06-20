@@ -10,7 +10,7 @@ import {FlextModule} from '../flext.module';
 * */
 export function FlextException(definition: HandlerDefinition = {}): Function {
     const {preStage, postStage, successStage, errorStage, payload} = definition;
-    return function (target, key, descriptor) {
+    const factory = function (target, key, descriptor) {
         descriptor = descriptor || Object.getOwnPropertyDescriptor(target, key);
         const {value: originalMethod} = descriptor;
 
@@ -30,6 +30,7 @@ export function FlextException(definition: HandlerDefinition = {}): Function {
 
         return descriptor;
     };
+    return factory;
 }
 
 /*
@@ -39,7 +40,7 @@ export function FlextException(definition: HandlerDefinition = {}): Function {
 * */
 export function FlextHandler(definition: HandlerDefinition = {}): Function {
     const {preStage, postStage, successStage, errorStage, payload} = definition;
-    return function (target: any, key: string, descriptor: PropertyDescriptor) {
+    const factory = function (target: any, key: string, descriptor: PropertyDescriptor) {
         descriptor = descriptor || Object.getOwnPropertyDescriptor(target, key);
         const {value: originalMethod} = descriptor;
 
@@ -59,6 +60,7 @@ export function FlextHandler(definition: HandlerDefinition = {}): Function {
 
         return descriptor;
     };
+    return factory;
 }
 
 /*

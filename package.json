@@ -1,6 +1,6 @@
 {
   "name": "flext",
-  "version": "1.0.0-beta.5",
+  "version": "1.0.0-beta.6",
   "description": "Flow Extension",
   "private": false,
   "main": "./dist/index.js",

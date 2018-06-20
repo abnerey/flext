@@ -9,7 +9,7 @@ import {execute} from '../util/flext.util';
 * @param payload any value to be used in case type would it be FlextType.CUSTOM or FlextType.CLASS
 * */
 export function FlextPromise(type?: FlextType, payload: any = null) {
-    return function (target, key, descriptor) {
+    const factory = function (target, key, descriptor) {
         descriptor = descriptor || Object.getOwnPropertyDescriptor(target, key);
         const {value: originalMethod} = descriptor;
 
@@ -25,4 +25,5 @@ export function FlextPromise(type?: FlextType, payload: any = null) {
 
         return descriptor;
     };
+    return factory;
 }

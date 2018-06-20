@@ -39,11 +39,12 @@ export function FlextSuccessStage() {
 * @return Function to use as decorator
 * */
 function stageDecoratorHandler(stage: FlextStage) {
-    return function (target: any, key: string, descriptor: PropertyDescriptor) {
+    const factory = function (target: any, key: string, descriptor: PropertyDescriptor) {
         descriptor = descriptor || Object.getOwnPropertyDescriptor(target, key);
         addToManager(key, descriptor, stage);
         return descriptor;
     }
+    return factory;
 }
 
 /*
