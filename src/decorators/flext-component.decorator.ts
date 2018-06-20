@@ -6,7 +6,7 @@ import {FlextMixin} from '../typing/flext.types';
 * @return Valid function to decorate classes
 * */
 export function FlextComponent(mixins: FlextMixin[] = []) {
-    return function (constructor) {
+    const factory = function (constructor) {
         mixins.forEach(({mixin, value}) => {
             const fieldCollector = {};
             mixin.apply(fieldCollector);
@@ -28,6 +28,7 @@ export function FlextComponent(mixins: FlextMixin[] = []) {
             });
         });
     };
+    return factory;
 }
 
 /*
