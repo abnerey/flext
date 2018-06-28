@@ -1,0 +1,48 @@
+{
+  "name": "flext",
+  "version": "6.0.0-beta.1",
+  "description": "Flow Extension",
+  "private": false,
+  "peerDependencies": {
+    "@angular/core": "^6.0.0-rc.0 || ^6.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abnerey/flext.git"
+  },
+  "keywords": [
+    "angular",
+    "angular 4",
+    "angular 5",
+    "angular 6",
+    "flow",
+    "error",
+    "handle",
+    "async",
+    "frontend",
+    "front",
+    "end",
+    "control",
+    "functions",
+    "await",
+    "es6",
+    "flew",
+    "flew-handler",
+    "handler",
+    "typescript",
+    "decorators",
+    "exceptions",
+    "promises",
+    "aspect",
+    "AOP",
+    "oriented",
+    "middleware",
+    "extention"
+  ],
+  "author": "Abner Juarez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/abnerey/flext/issues"
+  },
+  "homepage": "https://github.com/abnerey/flext#readme"
+}
